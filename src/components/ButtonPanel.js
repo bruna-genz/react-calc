@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-function ButtonPannel() {
+function ButtonPanel() {
   return (
     <div className="ButtonPannel">
       <div className="group1">
@@ -37,4 +37,4 @@ function ButtonPannel() {
   );
 }
 
-export default ButtonPannel;
+export default ButtonPanel;

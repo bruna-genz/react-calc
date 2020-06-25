@@ -3,7 +3,7 @@ import Button from './Button';
 
 function ButtonPanel() {
   return (
-    <div className="ButtonPannel">
+    <div className="ButtonPanel">
       <div className="group1">
         <Button name="AC" />
         <Button name="+/-" />

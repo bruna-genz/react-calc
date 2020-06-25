@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 700px;
+  margin: 100px auto;
   h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
@@ -10,12 +11,14 @@
 .Display {
   display: flex;
   height: 100px;
-  background-color: gray;
+  background-color: #625f5f;
   color: white;
   font-weight: bold;
   justify-content: flex-end;
+  align-items: center;
   h2 {
-    padding: 15px 25px;
+    padding: 0 25px;
+    font-size: 40px;
     &:hover {
       cursor: default;
     }
@@ -28,20 +31,14 @@
   div {
     height: 100px;
     button {
-      width: 25%;
       height: 100%;
       border-radius: 0;
-      border: solid 1px #d0d0d0;
+      border: solid 1px #cac3c3;
       color: #000;
       font-size: 20px;
       &:hover {
         cursor: pointer;
       }
-    }
-  }
-  .group5 {
-    button:first-of-type {
-      width: 50% !important;
     }
   }
 }

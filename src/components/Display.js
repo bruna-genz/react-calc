@@ -1,11 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Display(prop) {
-  return (
-    <div className="Display">
-      <h2>{prop.calcResult}</h2>
-    </div>
-  );
+function Display({ calcResult }) {
+  return <h2>{calcResult}</h2>;
 }
+
+Display.defaultProps = {
+  calcResult: '0',
+};
+
+Display.propTypes = { calcResult: PropTypes.string };
 
 export default Display;

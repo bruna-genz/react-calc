@@ -6,11 +6,13 @@ function ButtonPanel() {
 
   return (
 
-    <div className="ButtonPannel">
+    <div className="ButtonPanel">
       {buttonGroups.map((group, index) => (
         <div key={`group${index + 1}`} className={`group${index + 1}`}>
-          {group.map(button => (
-            <Button key={button} buttonName={button} />
+          {group.map((button, index) => (
+            index === 3
+              ? <Button key={button} buttonName={button} wide={button === '0'} />
+              : <Button key={button} buttonName={button} wide={button === '0'} color="#e0e0e0" />
           ))}
         </div>
       ))}

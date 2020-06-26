@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>Math-magicians calculator</h1>
-      <Display calcResult="0" />
+      <Display />
       <ButtonPanel />
     </div>
   );

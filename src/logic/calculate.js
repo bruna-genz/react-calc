@@ -14,26 +14,41 @@ const calculate = (calculatorData, buttonName) => {
     case '7':
     case '8':
     case '9':
-      if (!total) {
-        return { total: buttonName, next, operation };
+      if (total && total !== '0') {
+        return { total: total + buttonName, next, operation };
       }
-      return { total: total + buttonName, next, operation };
+      return { total: buttonName, next, operation };
 
     case '+/-':
-      return { total: -total, next: -next, operation };
+      if (total.indexOf('-') >= 0) {
+        return { total: total.substring(1), next, operation };
+      }
+      return { total: total ? `-${total}` : null, next, operation };
 
     case '+':
     case '-':
     case 'x':
     case '÷':
-    case '%': // the value on total will go to next and total will be true
-      return { total: null, next: total, operation: buttonName };
+    case '%':
+      if (total) {
+        return { total: null, next: total, operation: buttonName };
+      }
+      return { total, next: '0', operation: buttonName };
     case '.':
-      return { total: buttonName, next, operation };
+      if (total) {
+        if (total.indexOf('.') < 0) {
+          return { total: total + buttonName, next, operation };
+        }
+        return { total, next, operation };
+      }
+      return { total: '0.', next, operation };
     case 'AC':
       return { total: null, next: null, operation: null };
     case '=':
-      return { total: operate(total, next, operation).toString(), next, buttonName };
+      if (operation) {
+        return { total: operate(total, next, operation).toString(), next, operation: null };
+      }
+      return { total, next, operation };
     default:
       return 'err';
   }

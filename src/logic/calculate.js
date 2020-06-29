@@ -24,7 +24,7 @@ const calculate = (calculatorData, buttonName) => {
         return { total: total.substring(1), next, operation };
       }
       return { total: total ? `-${total}` : null, next, operation };
-
+      
     case '+':
     case '-':
     case 'x':

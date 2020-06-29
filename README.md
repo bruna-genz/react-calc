@@ -19,7 +19,7 @@ This project consists on a simple calculator app, built with React and deployed 
 
 ## Preview
 
-![screenshot]()
+![screenshot](./src/calc-screen.png)
 
 ## Built With
 

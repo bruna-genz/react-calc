@@ -14,7 +14,7 @@ const calculate = (calculatorData, buttonName) => {
     case '7':
     case '8':
     case '9':
-      if (total && total !== '0' && operation) {
+      if (total && total !== '0') {
         return { total: total + buttonName, next, operation };
       }
       return { total: buttonName, next, operation };
@@ -46,7 +46,7 @@ const calculate = (calculatorData, buttonName) => {
       return { total: null, next: null, operation: null };
     case '=':
       if (operation) {
-        return { total: operate(total, next, operation).toString(), next, operation: null };
+        return { total: null, next: operate(next, total, operation).toString(), operation: null };
       }
       return { total, next, operation };
     default:

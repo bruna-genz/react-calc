@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Display({ calcResult }) {
-  return <h2>{calcResult}</h2>;
+  return (
+    <div className="Display">
+      <h2>{calcResult}</h2>
+    </div>
+  );
 }
 
 Display.defaultProps = {

@@ -27,6 +27,11 @@ class App extends React.Component {
       <div className="App">
         <Display calcResult={total || next || undefined} operation={operation} />
         <ButtonPanel clickHandler={this.handleClick} />
+        <div>
+          <p>{`total: ${total}`}</p>
+          <p>{`next: ${next}`}</p>
+          <p>{`operation: ${operation}`}</p>
+        </div>
       </div>
     );
   }

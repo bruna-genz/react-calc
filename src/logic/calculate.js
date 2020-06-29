@@ -31,6 +31,9 @@ const calculate = (calculatorData, buttonName) => {
     case '÷':
     case '%':
       if (total) {
+        if (next && operation) {
+          return { total: null, next: operate(next, total, operation).toString(), operation: buttonName };
+        }
         return { total: null, next: total, operation: buttonName };
       }
       return { total, next: '0', operation: buttonName };

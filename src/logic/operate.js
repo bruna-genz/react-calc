@@ -1,8 +1,8 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  const x = Big(numberOne);
-  const y = Big(numberTwo);
+  const x = Big(numberOne || 0);
+  const y = Big(numberTwo || 0);
 
   switch (operation) {
     case '+':

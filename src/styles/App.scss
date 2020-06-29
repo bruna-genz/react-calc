@@ -1,0 +1,57 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 100px auto;
+
+  h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+}
+
+.Display {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: #625f5f;
+  color: white;
+  font-weight: bold;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+  p {
+    padding: 10px 25px;
+    margin: 0;
+  }
+ 
+  h2 {
+    padding: 10px 25px;
+    font-size: 30px;
+    margin: 0;
+  
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+.ButtonPanel {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    height: 100px;
+
+    button {
+      height: 100%;
+      border-radius: 0;
+      border: solid 1px #cac3c3;
+      color: #000;
+      font-size: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

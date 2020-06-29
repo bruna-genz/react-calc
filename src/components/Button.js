@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Button(prop) {
+function Button({ buttonName }) {
   const styles = {
     backgroundColor: '#f5913e',
     width: '25%',
@@ -10,8 +11,10 @@ function Button(prop) {
   if (prop.wide) styles.width = '50%';
 
   return (
-    <button type="button" style={styles}>{prop.name}</button>
+    <button type="button" style={styles}>{buttonName}</button>
   );
 }
+
+Button.propTypes = { buttonName: PropTypes.string.isRequired };
 
 export default Button;
